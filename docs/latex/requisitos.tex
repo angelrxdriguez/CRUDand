@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\title{Análisis y Espicificación de Requisitos}
+\author{Ángel Panadero Rodríguez}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Análisis de Requisitos}
+
+Gestor de baraja para Android.\\
+Ángel Panadero Rodríguez\\
+2º Desarrollo de Aplicaciones Multiplataforma
+
+\section*{Descripción del problema}
+
+Mis amigos y yo queremos una forma simple y rápida de gestionar nuestras cartas. Así llevamos la cuenta y registro de las cartas que intercambiamos.\\
+Necesitamos una aplicación para intalar en nuestros móviles donde reflejemos nuestras barajas y los intercambios que hacemos entre nosotros.\\
+Debe permitir:
+\begin{itemize}
+\item Dar cartasa de alta en nuestras barajas.
+\item Consultar la baraja de otros usuarios.
+\item Dar cartas de baja de nuestra baraja (por pérdida o rotura).
+\item Poder cambiar parámetros de nuestras cartas (por si nos equivocamos al meterlas).
+\item Intercambiar cartas de mi baraja con las de mis amigos.
+\end{itemize}
+
+\section*{Requisitos funcionales}
+
+RF-1: Registrar usuarios con su nombre.\\
+RF-2: Permitir registrar en la base de datos cartas. Crear cartas.\\
+RF-3: Realizar intercambios de cartas de un usuario a otro.\\
+RF-4: Visionar las cartas registradas en la base de datos asociadas a un usuario.
+
+\section*{Requisitos no funcionales}
+
+RNF-1: Permitir modificar las cartas creadas en la base de datos.\\
+RNF-2: Ver registros de intercambios de cartas entre usuarios.\\
+RNF-3: Cada usuario pueda ver de una forma estética las cartas de otros usuarios.
+
+\section*{Casos de Uso}
+
+\begin{tabular}{|p{1cm}|p{4cm}|p{10cm}|}
+\hline
+\textbf{Nº} & \textbf{Caso de Uso} & \textbf{Descripción} \\
+\hline
+CU1 & Iniciar sesión & El usuario accede a la aplicación introduciendo su nombre. Si el nombre existe, se cargan sus datos y cartas asociadas. \\
+\hline
+CU2 & Crear usuario & Permite a un nuevo usuario registrarse introduciendo únicamente su nombre. Se crea su perfil en la base de datos. \\
+\hline
+CU3 & Añadir carta a la baraja & El usuario puede dar de alta nuevas cartas, introduciendo sus datos (nombre, tipo, poder, rareza, etc.) para añadirlas a su colección. \\
+\hline
+CU4 & Modificar carta & El usuario puede editar los datos de una carta existente en su baraja (por ejemplo, si cometió un error al registrarla). \\
+\hline
+CU5 & Eliminar carta & El usuario puede dar de baja una carta por pérdida o rotura, eliminándola de su baraja. \\
+\hline
+CU6 & Intercambiar cartas con otro usuario & Permite al usuario seleccionar una carta de su baraja y cambiarla por otra carta de un amigo. La aplicación actualiza automáticamente ambas barajas. \\
+\hline
+\end{tabular}
+
+\section*{Historias de Usuario}
+
+\begin{tabular}{|p{1.2cm}|p{3.8cm}|p{6cm}|p{3cm}|}
+\hline
+\textbf{ID} & \textbf{Como...} & \textbf{Quiero...} & \textbf{Para...} \\
+\hline
+HU1 & Usuario & Iniciar sesin con solo mi nombre & Acceder a mi baraja y datos de forma rápida \\
+\hline
+HU2 & Nuevo & Registrarme con mi nombre & Iniciar la aplicacion  \\
+\hline
+HU3 & Usuario & Añadir cartas a mi baraja introduciendo sus datos & Mantener actualizada mi colección \\
+\hline
+HU4 & Usuario & Modificar los datos de una carta existente & Corregir errores al registrarla \\
+\hline
+HU5 & Usuario & Eliminar una carta de mi baraja  & Mantener un inventario ordenado \\
+\hline
+HU6 & Usuario & Intercambiar una carta con un amigo & Actualizar  barajas y llevar control de intercambios \\
+\hline
+\end{tabular}
+
+
+\end{document}
