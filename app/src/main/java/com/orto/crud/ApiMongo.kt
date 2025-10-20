@@ -12,7 +12,7 @@ data class Carta(
 )
 
 data class CrearBody(
-    val dataSource: String,      // lo enviaremos pero el server lo ignora
+    val dataSource: String,      
     val database: String,
     val collection: String,
     val document: Map<String, Any?>
